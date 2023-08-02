@@ -19,3 +19,79 @@ footer {
   bottom: 0; 
   margin: 10px 0px 20px 0px;
 }
+
+.barraNavegar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99.9%;
+  text-align: left;
+  border: 2px solid #000000;
+  background-color: white;
+}
+
+.barraNavegar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.barraNavegar li {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 40px;
+  font-size: 25px;
+}
+
+.barraNavegar li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.barraNavegar a:hover{
+  color: rgb(121, 203, 250);
+}
+
+.index{
+  margin: 20px 60px 0px 20px;
+  background-image: url('../img/fondoIndex.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.index h1{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 80px;
+  font-family: cursive;
+}
+
+.botonIndex {
+  background-color: #67ff9f;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 16px 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 50px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 760px;
+  margin-top: 250px;
+}
+
+.botonIndex {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
