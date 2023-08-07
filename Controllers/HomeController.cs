@@ -12,21 +12,18 @@ public class HomeController : Controller
     public IActionResult ConfigurarJuego()
     {
         Juego.InicializarJuego();
-        ViewBag.Dificultades = Dificultades;
-        ViewBag.Categorias = Categorias;
+        ViewBag.Dificultades = Juego.ObtenerDificultades();
+        ViewBag.Categorias = Juego.ObtenerCategorias();
         return View();
     }
 
     public IActionResult Comenzar(string username, int dificultad, int categoria){
         Juego.CargarPartida(username, dificultad, categoria);
-        if(Juego.Preguntas.Count>0){
-            return RedirectToAction("Jugar")
+        if(Juego._preguntas.Count>0){
+            return RedirectToAction("Jugar");
         }else{
-            return RedirectToAction("ConfigurarJuego")
+            return RedirectToAction("ConfigurarJuego");
         }
     }
 
-    public IActionResult Jugar(){
-        
-    }
 }

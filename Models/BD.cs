@@ -24,24 +24,31 @@ public class BD{
 
     public static List<Pregunta> ObtenerPreguntas(int Dificultad, int Categoria){
         List<Pregunta> ListaPregunta = null;
+        using(SqlConnection db = new SqlConnection(_connectionString)){
         if(Dificultad >= 0 && Categoria >= 0){
             string sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pCategoria AND IdDificultad = @pDificultad";
+            ListaPregunta = db.Query<Pregunta>(sql, new {pCategoria = Categoria, pDificultad = Dificultad}).ToList();   
         }else if(Dificultad == -1){
             string sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pCategoria";
+            ListaPregunta = db.Query<Pregunta>(sql, new {pCategoria = Categoria}).ToList();
         }else if(Categoria == -1){
             string sql = "SELECT * FROM Preguntas WHERE IdDificultad = @pDificultad";
+            ListaPregunta = db.Query<Pregunta>(sql, new {pDificultad = Dificultad}).ToList();
         }
-        using(SqlConnection db = new SqlConnection(_connectionString)){
-            ListaPregunta = db.Query<Pregunta>(sql).ToList();      
         }
         return ListaPregunta;
     }
 
     public static List<Respuesta> ObtenerRespuestas(List<Pregunta> preguntas){
         List<Respuesta> ListaRespuestas = null;
+        List<Respuesta> respuestan = null;
+        using(SqlConnection db = new SqlConnection(_connectionString)){
         foreach (Pregunta pregunta in preguntas)
         {
-            
+            string sql = "SELECT * FROM Respuestas WHERE IdPregunta = @pIdPregunta";
+            respuestan = db.Query<Respuesta>(sql, new{pIdPregunta = pregunta.IdPregunta}).ToList();
+            ListaRespuestas.AddRange (respuestan);
+        }
         }
         return ListaRespuestas;
     }
