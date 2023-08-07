@@ -66,3 +66,18 @@ footer {
   font-size: 20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.configurarJuego h1{
+  text-align: center;
+  margin-top: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.configurarJuego{
+  margin: 20px 60px 0px 20px;
+  background-image: url('../img/fondoConfigurarJuego.jfif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
