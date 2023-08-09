@@ -52,4 +52,20 @@ public class BD{
         }
         return ListaRespuestas;
     }
+
+    public static bool ObtenerRespuesta(int IdRespuesta){
+        bool Correcta = false;
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            string sql = "SELECT Correcta FROM Respuesta WHERE IdRespuesta = @pIdRespuesta";
+            Correcta = db.QueryFirstOrDefault<bool>(sql, new{pIdRespuesta = IdRespuesta});
+        }
+        return Correcta;
+    }
+
+    public static void BorrarPregunta(int IdPregunta){
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            string sql = "DELETE FROM Preguntas WHERE IdPregunta = @pIdPregunta";
+            db.Execute(sql, new{pIdPregunta = IdPregunta});
+        }
+    }
 }

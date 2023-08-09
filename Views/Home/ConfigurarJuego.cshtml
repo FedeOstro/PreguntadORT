@@ -7,7 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body class="configurarJuego">
-    <h1>Preparate para  Jugar</h1>
+    <h1>Preparate para Jugar</h1>
+    <form class="formulario" method="post" action="configuracion">
+    <a>Nombre de Usuario:</a> <input type="text" name="nombreJugador" placeholder="Ingrese su nombre"/><br/>
+    <a>Dificultad:</a> <input type="text" name="dificultad" placeholder="Ingrese su dificultad"/><br/>
+    <a>Categoria:</a> <input type="text" name="categoria" placeholder="Ingrese la categoria de juego"/><br/>
+    </form>
+    <button class="botonConfig"><a href='@Url.Action("Juego")'>Comenzar</a></button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>

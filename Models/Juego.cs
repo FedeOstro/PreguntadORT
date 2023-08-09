@@ -28,23 +28,33 @@ public class Juego{
         int n = random(0, _preguntas.Count);
         return(_preguntas[n]);
     }
-    private static int random(int inicio, int fin)
-        {
-            int n;
-            Random random = new Random();
-            n = random.Next(inicio, fin);
-            return n;
-        }
 
-        public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
-          List<Respuesta> responsas = null;
-           foreach(Respuesta R in _respuestas){
-            if(R.IdPregunta == idPregunta){
-                responsas.Add(R);
-            }
-           }
-           return responsas;
+    private static int random(int inicio, int fin){
+        int n;
+        Random random = new Random();
+        n = random.Next(inicio, fin);
+        return n;
+    }
+
+    public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
+        List<Respuesta> responsas = null;
+        foreach(Respuesta R in _respuestas){
+        if(R.IdPregunta == idPregunta){
+            responsas.Add(R);
         }
+        }
+        return responsas;
+    }
+
+    public static bool VerificarRespuestas(int idPregunta, int idRespuesta){
+        bool Correcta = BD.ObtenerRespuesta(idRespuesta);
+        if(Correcta == true){
+            _puntajeActual++;
+            _cantidadPreguntasCorrectas++;
+            BD.BorrarPregunta(idPregunta);
+        }
+        return Correcta;
+    }
 
 
 }
