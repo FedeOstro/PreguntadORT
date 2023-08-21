@@ -71,7 +71,37 @@
   margin-top: -30px;
 }
 
+.IndexLink{
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 350px;
+  right: 900px;
+  background-color: rgba(68, 173, 71, 0.842);  
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 30%;
+  size: 200px;
+  font-size: 30px;
+}
 
+.configLink{
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 350px;
+  right: 900px;
+  background-color: rgba(68, 173, 71, 0.842);  
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 30%;
+  size: 200px;
+  font-size: 30px;
+}
 
 .bontonEmpezarJuego input[type=submit]{
   background-color: #4CAF50; 
@@ -95,28 +125,37 @@
 }
 
 .imgCiencias{
-  margin-top: -200px;
-  margin-left: -25px;
+  position: absolute;
+  right: 1700px;
+  top: 718px;
   width: 250px;
-  margin-bottom: 0px;
 }
 
 .imgDeportes{
-  margin-top: -350px;
+  position: absolute;
+  right: 0px;
+  top: 655px;
   width: 300px;
-  margin-left: 1605px;
 }
 
 .imgEntretenimiento{
-  margin-top: -1720px;
-  margin-left: 1732px;
+  position: absolute;
+  left: 1741px;
+  top: 42px;
   width: 180px;
 }
 
 .imgHistoria{
-  margin-top: -1692px;
-  margin-left: -30px;
+  position: absolute;
+  top: 46px;
+  right: 1730px;
   width: 250px;
+}
+
+.ConfigLogo{
+  margin-left: 780px;
+  width: 300px;
+  height: auto;
 }
 
 .juego{

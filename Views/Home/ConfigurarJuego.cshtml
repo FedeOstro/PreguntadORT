@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="~/site.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
@@ -9,20 +9,20 @@
   </head>
 
   
-  <img src="img/logoNormal.png" alt="logo">
+  <img src="~/img/logoNormal.png" alt="logo" class="ConfigLogo">
 
   <body class="ConfigurarJuego">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
        
-
+<form action='@Url.Action("Comenzar")'>
         <section class="btn-group">
-          <input type="text" placeholder="Ingrese su nombre"  data-bs-toggle="dropdown" aria-expanded="false">
+          <input name="username" type="text" placeholder="Ingrese su nombre"  data-bs-toggle="dropdown" aria-expanded="false">
         </section>
 
 
         <div class="opcionesDifCat">
           <main class="btn-goup">
-          <select type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <select name="dificultad" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <option>Seleccione Dificultad</option>
             <option>Facil</option>
             <option>Normal</option>
@@ -33,7 +33,7 @@
 
 
           <main class="btn-goup">
-            <select type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <select name="categoria" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <option>Seleccione Categoria</option>
             <option>Ciencia</option>
             <option>Deportes</option>
@@ -48,12 +48,13 @@
       <div class="bontonEmpezarJuego"> 
       <input type="submit" value="Empezar">
       </div> 
+</form>
 
       <div class="imagenesEsquinas">
-        <img class="imgCiencias" src="img/Ciencia.png">
-        <img class="imgDeportes" src="img/Deportes.png">
-        <img class="imgEntretenimiento" src="img/Entretenimiento.png">
-        <img class="imgHistoria" src="img/Historia.png">
+        <img class="imgCiencias" src="~/img/Ciencia.png">
+        <img class="imgDeportes" src="~/img/Deportes.png">
+        <img class="imgEntretenimiento" src="~/img/Entretenimiento.png">
+        <img class="imgHistoria" src="~/img/Historia.png">
      </div>
       
   </body>

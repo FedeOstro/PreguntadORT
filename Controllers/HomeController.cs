@@ -12,13 +12,14 @@ public class HomeController : Controller
     public IActionResult ConfigurarJuego()
     {
         Juego.InicializarJuego();
-        ViewBag.Dificultades = Juego.ObtenerDificultades();
         ViewBag.Categorias = Juego.ObtenerCategorias();
+        ViewBag.Dificultades = Juego.ObtenerDificultades();
         return View();
     }
 
     public IActionResult Comenzar(string username, int dificultad, int categoria){
         Juego.CargarPartida(username, dificultad, categoria);
+        ViewBag.nombre = username;
         if(Juego._preguntas.Count>0){
             return RedirectToAction("Jugar");
         }else{
@@ -28,9 +29,9 @@ public class HomeController : Controller
 
     public IActionResult Jugar(){
         ViewBag.Preguntas = Juego.ObtenerProximaPregunta();
-    if(Juego._preguntas==null){
-    return RedirectToAction("Fin");
-    }
+        if(Juego._preguntas==null){
+         return RedirectToAction("Fin");
+        }
         return View("Juego");
     }
 

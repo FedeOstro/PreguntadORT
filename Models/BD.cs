@@ -3,7 +3,7 @@ using Dapper;
 using System.Collections.Generic;
 
 public class BD{
-    private static string _connectionString = @"Server=localhost;DataBase=PreguntadORT;Trusted_Connection=True;";
+    private static string _connectionString = @"Server=FEDE-GAMMER\SQLEXPRESS;DataBase=PreguntadORT;Trusted_Connection=True;";
     public static List<Categoria> ObtenerCategorias(){
         List<Categoria> ListaCategorias = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){

@@ -24,10 +24,18 @@ public class Juego{
     public static void CargarPartida(string username, int dificultad, int categorias){
         _preguntas = BD.ObtenerPreguntas(dificultad, categorias);
         _respuestas = BD.ObtenerRespuestas(_preguntas);
+        _username = username;
     }
 
     public static Pregunta ObtenerProximaPregunta(){
-        int n = random(0, _preguntas.Count);
+        int n = -1;
+        if(n > -1){
+            _preguntas.RemoveAt(n);
+            _respuestas.RemoveAt(n);
+            n = random(0, _preguntas.Count);
+        }else{
+            n = random(0, _preguntas.Count);
+        }
         return(_preguntas[n]);
     }
 
