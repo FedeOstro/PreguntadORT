@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+
 public class Juego{
     private static string _username {get; set;}
     private static int _puntajeActual {get; set;}
@@ -55,6 +57,8 @@ public class Juego{
         }
         return Correcta;
     }
+
+
 
 
 }

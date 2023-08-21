@@ -26,4 +26,16 @@ public class HomeController : Controller
         }
     }
 
+    public IActionResult Jugar(){
+        ViewBag.Preguntas = Juego.ObtenerProximaPregunta();
+    if(Juego._preguntas==null){
+    return RedirectToAction("Fin");
+    }
+        return View("Juego");
+    }
+
+    [HttpPost]public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta){
+       ViewBag.Respuesta = Juego.VerificarRespuestas(idPregunta, idRespuesta);
+       return View();
+    }
 }
