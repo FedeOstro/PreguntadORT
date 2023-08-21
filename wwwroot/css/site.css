@@ -1,127 +1,351 @@
-html {
-  font-size: 14px;
-  position: relative;
-  min-height: 100%;
+.imgNavBar {
+  margin-top: 7px;
+  margin-right: 15px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-body {
-  margin: 20px 60px 0px 20px;
-}
-
-footer {
-  position: fixed; 
-  bottom: 0; 
-  margin: 10px 0px 20px 0px;
-}
-
-.botonIndex {
-  background-color: #67ff9f;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 16px 50px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 50px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin-left: 760px;
-  margin-top: 250px;
-}
-
-.botonIndex {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
-}
-
-.index{
-  margin: 20px 60px 0px 20px;
-  background-image: url('../img/fondoIndex.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-}
-
-.index h1{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
+.indexMod h1{
   margin-top: 100px;
-}
-
-.nav-item a{
-  margin-left: 15px;
-  font-size: 20px;
+  font-size: 60px;
+  color: white;
+  text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.configurarJuego h1{
-  text-align: center;
-  margin-top: 35px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+.indexMod button{
+  margin-left: 840px;
+  font-size: 45px;
+  border-radius: 40px;
+  background-color: green;
+  width: 250px;
+  margin-top: 300px;
 }
 
-.configurarJuego a{
-  font-size: 30px;
-  font-family:'Times New Roman', Times, serif;
+
+.ConfigurarJuego option{
+  text-align: left;
+  
 }
 
-.configurarJuego{
-  margin: 20px 60px 0px 20px;
-  background-image: url('../img/fondoConfigurarJuego.jfif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-}
-
-.formulario{
-  font-size: 25px;
-  margin-bottom: 30px;
-  margin-left: 550px;
-}
-
-.formulario input[type=text]{
-  margin-bottom: 50px;
-  margin-top: 100px;
+.ConfigurarJuego select{
   margin-left: 20px;
-
 }
 
-.botonConfig{
-  background-color: #67ff9f;
-  border-radius: 90px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 16px 50px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 30px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+.ConfigurarJuego img[src="img/logoNormal.png"]{
   margin-left: 750px;
+  width: 350px;
+  height: auto;
+  margin-top: 40px;
+}
+
+.ConfigurarJuego{
+  background-color: rgb(0, 23, 73)
+}
+
+.ConfigurarJuego main{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: auto;
+  margin-left: 615px;
+  margin-bottom: 25px;
+  margin-top: 75px;
+}
+
+.ConfigurarJuego section{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 70px;
+  padding: 50px;
+  margin-left: 615px;
+  margin-bottom: 25px;
+  margin-top: 75px;
+}
+
+.btn-group input[type=text]{
+  background-color: white;
+  border-color: black;
+  width: 585px;
+  height: 100px;
+  margin-left: -32px;
+  margin-top: -30px;
+}
+
+
+
+.bontonEmpezarJuego input[type=submit]{
+  background-color: #4CAF50; 
+  color: black; 
+  padding: 10px 60px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer; 
+  font-size: 40px;
+  margin-left: 790px;
+  margin-bottom: 30px;
   margin-top: 20px;
 }
 
-.botonConfig{
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
+.bontonEmpezarJuego input[type=submit]:hover {
+  background-color: #45a049; 
+}
+
+.opcionesDifCat{
+  margin-top: -60px;
+}
+
+.imgCiencias{
+  margin-top: -200px;
+  margin-left: -25px;
+  width: 250px;
+  margin-bottom: 0px;
+}
+
+.imgDeportes{
+  margin-top: -350px;
+  width: 300px;
+  margin-left: 1605px;
+}
+
+.imgEntretenimiento{
+  margin-top: -1720px;
+  margin-left: 1732px;
+  width: 180px;
+}
+
+.imgHistoria{
+  margin-top: -1692px;
+  margin-left: -30px;
+  width: 250px;
+}
+
+.juego{
+  background-color: rgb(0, 23, 73)
+}
+
+.pregunta h1{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin-top: 90px;
+}
+
+.imgPregunta img{
+  width: 350px;
+  height: auto;
+  margin-left: 780px;
+  margin-top: 35px;
+}
+
+.opcionesRespuestas{
+  margin-left: 150px;
+}
+
+.respuestaArriba input[type=button]{
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 30px;
+  border-radius: 30px;
+  margin-top: 70px;
+}
+
+.respuestaAbajo input[type=button]{
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 30px;
+  border-radius: 30px;
+  margin-top: 120px;
+}
+
+.izqArriba{
+  margin-left: 230px;
+}
+
+.derArriba{
+  margin-left: 400px;
+}
+
+.izqAbajo{
+  margin-left: 230px;
+}
+
+.derAbajo{
+  margin-left: 400px;
+}
+
+.resCorrecta{
+  background-color: rgb(81, 250, 58)
+}
+
+.resCorrecta h1{
+  text-align: center;
+  margin-top: 60px;
+  font-size: 70px;
+}
+
+.imgTic img{
+  width: 300px;
+  margin-left: 800px;
+  margin-top: 70px;
+}
+
+.resCorrecta h3{
+  margin-left: 800px;
+  margin-right: 850px;
+  margin-top: 40px;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.resCorrecta input[type=button]{
+  background-color: white;
+  font-size: 40px;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 75px;
+  padding-left: 75px;
+  margin-left: 775px;
+  margin-top: 20px;
+}
+
+.barraAbajo {
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: inline;
+  
+}
+
+.barraAbajo h4{
+  margin-left: 10px;
+  color: white;
+}
+
+.resIncorrecta{
+  background-color: rgb(255, 49, 49)
+}
+
+.resIncorrecta h1{
+  text-align: center;
+  margin-top: 60px;
+  font-size: 70px;
+}
+
+.imgCruz img{
+  width: 300px;
+  margin-left: 800px;
+  margin-top: 70px;
+}
+
+.resIncorrecta h3{
+  margin-left: 810px;
+  margin-right: 840px;
+  margin-top: 40px;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.resIncorrecta input[type=button]{
+  background-color: white;
+  font-size: 40px;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 75px;
+  padding-left: 75px;
+  margin-left: 780px;
+  margin-top: 20px;
+}
+
+
+.fin{
+  background-color: rgb(0, 23, 73)
+}
+
+.tarjeta{
+  background-color: white;
+  width: 700px;
+  height: 500px;
+  margin-top: 150px;
+  margin-left: 600px;
+  border: 6px solid;
+  border-color: black;
+}
+
+.tarjeta h1{
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 80px;
+}
+
+.tarjeta h3{
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+
+.tarjeta input[type=button]{
+  margin-left: 230px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-size: 30px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tarjeta img{
+  margin-top: -430px;
+  margin-left: 380px;
+  width: 240px;
+}
+
+.credito{
+  background-color: rgb(0, 23, 73)
+}
+
+.credito h1{
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.imgCreditos{
+  width: 300px;
+  margin-left: 815px;
+  margin-top: 20px;
+  margin-bottom: 150px;
+}
+
+ul.lista-horizontal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.lista-horizontal li {
+  display: inline;
+  margin-right: 10px; 
+}
+
+.lista-horizontal li{
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 255px;
+  border: 5px solid;
 }

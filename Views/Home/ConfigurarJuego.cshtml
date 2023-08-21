@@ -1,19 +1,60 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Configurar Juego</title>
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
-  <body class="configurarJuego">
-    <h1>Preparate para Jugar</h1>
-    <form class="formulario" method="post" action="configuracion">
-    <a>Nombre de Usuario:</a> <input type="text" name="nombreJugador" placeholder="Ingrese su nombre"/><br/>
-    <a>Dificultad:</a> <input type="text" name="dificultad" placeholder="Ingrese su dificultad"/><br/>
-    <a>Categoria:</a> <input type="text" name="categoria" placeholder="Ingrese la categoria de juego"/><br/>
-    </form>
-    <button class="botonConfig"><a href='@Url.Action("Juego")'>Comenzar</a></button>
+
+  
+  <img src="img/logoNormal.png" alt="logo">
+
+  <body class="ConfigurarJuego">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+       
+
+        <section class="btn-group">
+          <input type="text" placeholder="Ingrese su nombre"  data-bs-toggle="dropdown" aria-expanded="false">
+        </section>
+
+
+        <div class="opcionesDifCat">
+          <main class="btn-goup">
+          <select type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <option>Seleccione Dificultad</option>
+            <option>Facil</option>
+            <option>Normal</option>
+            <option>Dificil</option>
+            <option>Todas</option>
+          </select>
+          </main>
+
+
+          <main class="btn-goup">
+            <select type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <option>Seleccione Categoria</option>
+            <option>Ciencia</option>
+            <option>Deportes</option>
+            <option>Entretenimiento</option>
+            <option>Historia</option>
+            <option>Todas</option>
+          </select>
+          </main>
+          
+        </div>
+
+      <div class="bontonEmpezarJuego"> 
+      <input type="submit" value="Empezar">
+      </div> 
+
+      <div class="imagenesEsquinas">
+        <img class="imgCiencias" src="img/Ciencia.png">
+        <img class="imgDeportes" src="img/Deportes.png">
+        <img class="imgEntretenimiento" src="img/Entretenimiento.png">
+        <img class="imgHistoria" src="img/Historia.png">
+     </div>
+      
   </body>
 </html>
