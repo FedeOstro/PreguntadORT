@@ -4,34 +4,35 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>PreguntadORT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
 
   <body class="juego">
 
     <div class="pregunta">
-      <h1>@ViewBag.Preguntas</h1>
+      <h1>@ViewBag.Preguntas.Enunciado</h1>
     </div>
 
     <div class="imgPregunta">
-    <img src="img/basquet.jpg">
+    <img src="@ViewBag.Preguntas.Foto">
     </div>
 
     <div class="opcionesRespuestas">
       <div class="respuestaArriba">
-      <input class="izqArriba" type="button" value="1864">
-      <input class="derArriba" type="button" value="1900">
+      <input class="izqArriba" type="button" value="@ViewBag.Preguntas(0).Contenido">
+      <input class="derArriba" type="button" value="@ViewBag.Preguntas(1).Contenido">
       </div>
       
       <div class="respuestaAbajo">
-      <input class="izqAbajo" type="button" value="1912">
-      <input class="derAbajo" type="button" value="1888">
+      <input class="izqAbajo" type="button" value="@ViewBag.Preguntas(2).Contenido">
+      <input class="derAbajo" type="button" value="@ViewBag.Preguntas(3).Contenido">
       </div>
     </div>
 
     <div class="barraAbajo">
-        <h4>@ViewBag.nombre</h4>
+        <h4 class = "nombreAbajo">@ViewBag.nombre</h4>
+        <h4 class = "puntosAbajo">@ViewBag.puntos</h4>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

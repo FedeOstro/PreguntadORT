@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 public class Juego{
     private static string _username {get; set;}
-    private static int _puntajeActual {get; set;}
+    public static int _puntajeActual {get; set;}
     private static int  _cantidadPreguntasCorrectas {get; set;}
     public static List<Pregunta> _preguntas {get; set;}
     private static List<Respuesta> _respuestas {get; set;}

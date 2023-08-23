@@ -31,6 +31,8 @@ public class HomeController : Controller
     public IActionResult Jugar(string usernames){
         ViewBag.Preguntas = Juego.ObtenerProximaPregunta();
         ViewBag.nombre = usernames;
+        Juego._puntajeActual = 0;
+        ViewBag.puntos = Juego._puntajeActual;
         if(Juego._preguntas==null){
          return RedirectToAction("Fin");
         }
