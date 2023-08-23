@@ -22,24 +22,21 @@
 
         <div class="opcionesDifCat">
           <main class="btn-goup">
-          <select name="dificultad" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <option>Seleccione Dificultad</option>
-            <option>Facil</option>
-            <option>Normal</option>
-            <option>Dificil</option>
-            <option>Todas</option>
+          <select name="categoria" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <option>Seleccione Categoria</option>
+           @foreach(Categoria c in ViewBag.Categorias){
+            <option value="@c.IdCategoria">@c.Nombre</option>
+           }
           </select>
           </main>
 
 
           <main class="btn-goup">
-            <select name="categoria" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <option>Seleccione Categoria</option>
-            <option>Ciencia</option>
-            <option>Deportes</option>
-            <option>Entretenimiento</option>
-            <option>Historia</option>
-            <option>Todas</option>
+            <select name="dificultad" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <option>Seleccione Dificultad</option>
+           @foreach(Dificultad d in ViewBag.Dificultades){
+            <option value="@d.IdDificultad">@d.Nombre</option>
+           }
           </select>
           </main>
           

@@ -3,7 +3,7 @@ using Dapper;
 using System.Collections.Generic;
 
 public class BD{
-    private static string _connectionString = @"Server=FEDE-GAMMER\SQLEXPRESS;DataBase=PreguntadORT;Trusted_Connection=True;";
+    private static string _connectionString = @"Server=localhost;DataBase=PreguntadORT;Trusted_Connection=True;";
     public static List<Categoria> ObtenerCategorias(){
         List<Categoria> ListaCategorias = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
@@ -40,14 +40,15 @@ public class BD{
     }
 
     public static List<Respuesta> ObtenerRespuestas(List<Pregunta> preguntas){
-        List<Respuesta> ListaRespuestas = null;
+        List<Respuesta> ListaRespuestas = new List <Respuesta>();
         List<Respuesta> respuestan = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
         foreach (Pregunta pregunta in preguntas)
         {
             string sql = "SELECT * FROM Respuestas WHERE IdPregunta = @pIdPregunta";
             respuestan = db.Query<Respuesta>(sql, new{pIdPregunta = pregunta.IdPregunta}).ToList();
-            ListaRespuestas.AddRange (respuestan);
+            Console.WriteLine(respuestan[0].Contenido);
+            ListaRespuestas.AddRange(respuestan);
         }
         }
         return ListaRespuestas;
