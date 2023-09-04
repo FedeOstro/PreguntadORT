@@ -27,7 +27,7 @@ public class BD{
         using(SqlConnection db = new SqlConnection(_connectionString)){
         if(Dificultad >= 0 && Categoria >= 0){
             string sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pCategoria AND IdDificultad = @pDificultad";
-            ListaPregunta = db.Query<Pregunta>(sql, new {pCategoria = Categoria, pDificultad = Dificultad}).ToList();   
+            ListaPregunta = db.Query<Pregunta>(sql, new {pCategoria = Categoria, pDificultad = Dificultad}).ToList();
         }else if(Dificultad == -1){
             string sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pCategoria";
             ListaPregunta = db.Query<Pregunta>(sql, new {pCategoria = Categoria}).ToList();
