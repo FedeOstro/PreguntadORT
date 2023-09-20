@@ -5,7 +5,7 @@ public class Juego{
     public static int _puntajeActual {get; set;}
     private static int  _cantidadPreguntasCorrectas {get; set;}
     public static List<Pregunta> _preguntas {get; set;}
-    private static List<Respuesta> _respuestas {get; set;}
+    public static List<Respuesta> _respuestas {get; set;}
 
     public static void InicializarJuego(){
         _username = "";

@@ -19,7 +19,6 @@ public class HomeController : Controller
 
     public IActionResult Comenzar(string username, int dificultad, int categoria){
         Juego.CargarPartida(username, dificultad, categoria);
-        
         Console.WriteLine(username, dificultad, categoria);
         if(Juego._preguntas.Count>0){
             return RedirectToAction("Jugar", new {usernames = username});
