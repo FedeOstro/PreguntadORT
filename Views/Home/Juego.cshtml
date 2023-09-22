@@ -19,13 +19,13 @@
 </div>
 <div class="opcionesRespuestas">
     <div class="respuestaArriba">
-        <a class="izqArriba" href='@Url.Action("VerificarRespuesta", new {idPregunta = ViewBag.Preguntas.IdPregunta, idRespuesta = Juego._respuestas[0].IdRespuesta})'>@Juego._respuestas[0].Contenido</a>
-        <a class="derArriba" href='@Url.Action("VerificarRespuesta", new {idPregunta = ViewBag.Preguntas.IdPregunta, idRespuesta = Juego._respuestas[0].IdRespuesta})'>@Juego._respuestas[1].Contenido</a>
+        <a class="izqArriba" href='@Url.Action("VerificarRespuesta", new {idPregunta = ViewBag.Preguntas.IdPregunta, idRespuesta = Juego._respuestas[0].IdRespuesta})'>@ViewBag.Respuestas[0].Contenido</a>
+        <a class="derArriba" href='@Url.Action("VerificarRespuesta", new {idPregunta = ViewBag.Preguntas.IdPregunta, idRespuesta = Juego._respuestas[1].IdRespuesta})'>@ViewBag.Respuestas[1].Contenido</a>
     </div>
     
     <div class="respuestaAbajo">
-        <a class="izqAbajo" href='@Url.Action("VerificarRespuesta", new {idPregunta = ViewBag.Preguntas.IdPregunta, idRespuesta = Juego._respuestas[2].IdRespuesta})'>@Juego._respuestas[2].Contenido</a>
-        <a class="derAbajo" href='@Url.Action("VerificarRespuesta", new {idPregunta = ViewBag.Preguntas.IdPregunta, idRespuesta = Juego._respuestas[3].IdRespuesta})'>@Juego._respuestas[3].Contenido</a>
+        <a class="izqAbajo" href='@Url.Action("VerificarRespuesta", new {idPregunta = ViewBag.Preguntas.IdPregunta, idRespuesta = Juego._respuestas[2].IdRespuesta})'>@ViewBag.Respuestas[2].Contenido</a>
+        <a class="derAbajo" href='@Url.Action("VerificarRespuesta", new {idPregunta = ViewBag.Preguntas.IdPregunta, idRespuesta = Juego._respuestas[3].IdRespuesta})'>@ViewBag.Respuestas[3].Contenido</a>
     </div>
 </div>
 

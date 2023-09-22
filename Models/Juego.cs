@@ -47,7 +47,7 @@ public class Juego{
     }
 
     public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
-        List<Respuesta> responsas = null;
+        List<Respuesta> responsas = new List<Respuesta>();
         foreach(Respuesta R in _respuestas){
         if(R.IdPregunta == idPregunta){
             responsas.Add(R);
