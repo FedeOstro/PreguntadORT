@@ -182,19 +182,37 @@
   margin-left: 150px;
 }
 
-.respuestaArriba input[type=button]{
+.respuestaArriba a{
+  background-color: white;
+  border-color: black;
+  border-radius: 10px;
   padding-left: 150px;
   padding-right: 150px;
   font-size: 30px;
   border-radius: 30px;
-  margin-top: 70px;
+  margin-top: 270px;
+  text-decoration: none;
+  color: black;
 }
 
-.respuestaAbajo input[type=button]{
+.respuestaAbajo a{
+  background-color: white;
+  border-color: black;
+  border-radius: 10px;
   padding-left: 150px;
   padding-right: 150px;
   font-size: 30px;
   border-radius: 30px;
+  margin-top: 120px;
+  text-decoration: none;
+  color: black;
+}
+
+.respuestaArriba{
+  margin-top: 50px;
+}
+
+.respuestaAbajo{
   margin-top: 120px;
 }
 
