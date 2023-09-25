@@ -1,24 +1,27 @@
 using Microsoft.AspNetCore.Mvc;
 
 public class Juego{
-    private static string _username {get; set;}
+    public static string _username {get; set;}
     public static int _puntajeActual {get; set;}
     private static int  _cantidadPreguntasCorrectas {get; set;}
     public static List<Pregunta> _preguntas {get; set;}
     public static List<Respuesta> _respuestas {get; set;}
 
+    public static int n {get; set;}
+
     public static void InicializarJuego(){
         _username = "";
         _puntajeActual = 0;
         _cantidadPreguntasCorrectas = 0;
+        n = -1;
     }
 
     public static List<Categoria> ObtenerCategorias(){
-        return(BD.ObtenerCategorias());
+        return BD.ObtenerCategorias();
     }
 
     public static List<Dificultad> ObtenerDificultades(){
-        return(BD.ObtenerDificultades());
+        return BD.ObtenerDificultades();
     }
 
     public static void CargarPartida(string username, int dificultad, int categorias){
@@ -27,16 +30,14 @@ public class Juego{
         _username = username;
     }
 
-    public static Pregunta ObtenerProximaPregunta(){
-        int n = -1;
+    public static Pregunta ObtenerProximaPregunta(){ 
         if(n > -1){
-            _preguntas.RemoveAt(n);
-            _respuestas.RemoveAt(n);
-            n = random(0, _preguntas.Count);
+            n = random(0, _preguntas.Count-1);
+            Console.WriteLine(n);
         }else{
-            n = random(0, _preguntas.Count);
+            n = random(0, _preguntas.Count-1);
         }
-        return(_preguntas[n]);
+        return _preguntas[n];
     }
 
     private static int random(int inicio, int fin){
@@ -61,7 +62,6 @@ public class Juego{
         if(Correcta == true){
             _puntajeActual++;
             _cantidadPreguntasCorrectas++;
-            BD.BorrarPregunta(idPregunta);
         }
         return Correcta;
     }

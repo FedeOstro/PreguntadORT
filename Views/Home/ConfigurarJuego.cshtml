@@ -16,27 +16,29 @@
        
 <form action='@Url.Action("Comenzar")'>
         <section class="btn-group">
-          <input name="username" type="text" placeholder="Ingrese su nombre"  data-bs-toggle="dropdown" aria-expanded="false">
+          <input name="username" type="text" placeholder="Ingrese su nombre"  data-bs-toggle="dropdown" aria-expanded="false" required>
         </section>
 
 
         <div class="opcionesDifCat">
           <main class="btn-goup">
-          <select name="categoria" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <select name="categoria" type="button" data-bs-toggle="dropdown" aria-expanded="false" required>
             <option>Seleccione Categoria</option>
            @foreach(Categoria c in ViewBag.Categorias){
             <option value="@c.IdCategoria">@c.Nombre</option>
            }
+           <option value="-1">Todas</option>
           </select>
           </main>
 
 
           <main class="btn-goup">
-            <select name="dificultad" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <select name="dificultad" type="button" data-bs-toggle="dropdown" aria-expanded="false" required>
             <option>Seleccione Dificultad</option>
            @foreach(Dificultad d in ViewBag.Dificultades){
             <option value="@d.IdDificultad">@d.Nombre</option>
            }
+           <option value="-1">Todas</option>
           </select>
           </main>
           

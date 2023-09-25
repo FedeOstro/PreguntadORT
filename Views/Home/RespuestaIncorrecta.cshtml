@@ -4,21 +4,25 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>PreguntadORT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
+ <body class="resIncorrecta">
+    <h1>Respuesta Incorrecta</h1>
 
-  <body class="fin">
-
-    <div class="tarjeta">
-        <h1>¡Terminaste!</h1>
-        <h3>Nombre: @ViewBag.nombre</h3>
-        <h3>Puntaje: @ViewBag.puntos</h3>
-
-        <a href='@Url.Action("Index")'>Volver a Jugar</a>
-
-        <img src="~/img/logoNormal.png">
+    <div class="imgCruz">
+      <img src="~/img/cruz.png">
     </div>
+
+    <h3>Ganaste: 0 PT</h3>
+
+    <a href='@Url.Action("Jugar")' class="continuar">CONTINUAR</a>
+
+    <div class="barraAbajo">
+      <h4>@ViewBag.nombre</h4>
+      <h4 class="puntosAbajo">@ViewBag.puntos</h4>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -7,42 +7,21 @@
     <title>PreguntadORT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
-@if(ViewBag.respuestas.correcto){
-  <body class="resCorrecta">
+<body class="resCorrecta">
     <h1>¡Respuesta Correcta!</h1>
 
     <div class="imgTic">
-      <img src="img/tic.png">
+      <img src="~/img/tic.png">
     </div>
 
     <h3>Ganaste: 1 PT</h3>
 
-    <input type="button" value="Continuar">
+    <a href='@Url.Action("Jugar")' class="continuar">CONTINUAR</a>
 
     <div class="barraAbajo">
-      <h4>Federico</h4>
+      <h4>@ViewBag.nombre</h4>
+      <h4 class="puntosAbajo">@ViewBag.puntos</h4>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
-}
-  else{
-      <body class="resIncorrecta">
-    <h1>Respuesta Incorrecta</h1>
-
-    <div class="imgCruz">
-      <img src="img/cruz.png">
-    </div>
-
-    <h3>Ganaste: 0 PT</h3>
-
-    <input type="button" value="Continuar">
-
-    <div class="barraAbajo">
-      <h4>Federico</h4>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
-  };
-</html>

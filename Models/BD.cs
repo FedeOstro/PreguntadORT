@@ -3,7 +3,7 @@ using Dapper;
 using System.Collections.Generic;
 
 public class BD{
-    private static string _connectionString = @"Server=localhost;DataBase=PreguntadORT;Trusted_Connection=True;";
+    private static string _connectionString = @"Server=FEDE-GAMMER\SQLEXPRESS;DataBase=PreguntadORT;Trusted_Connection=True;";
     public static List<Categoria> ObtenerCategorias(){
         List<Categoria> ListaCategorias = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
@@ -28,6 +28,9 @@ public class BD{
         if(Dificultad >= 0 && Categoria >= 0){
             string sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pCategoria AND IdDificultad = @pDificultad";
             ListaPregunta = db.Query<Pregunta>(sql, new {pCategoria = Categoria, pDificultad = Dificultad}).ToList();
+        }else if(Dificultad == -1 && Categoria == -1){
+            string sql = "SELECT * FROM Preguntas";
+            ListaPregunta = db.Query<Pregunta>(sql).ToList();
         }else if(Dificultad == -1){
             string sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pCategoria";
             ListaPregunta = db.Query<Pregunta>(sql, new {pCategoria = Categoria}).ToList();
@@ -47,7 +50,6 @@ public class BD{
         {
             string sql = "SELECT * FROM Respuestas WHERE IdPregunta = @pIdPregunta";
             respuestan = db.Query<Respuesta>(sql, new{pIdPregunta = pregunta.IdPregunta}).ToList();
-            Console.WriteLine(respuestan[0].Contenido);
             ListaRespuestas.AddRange(respuestan);
         }
         }
@@ -57,7 +59,7 @@ public class BD{
     public static bool ObtenerRespuesta(int IdRespuesta){
         bool Correcta = false;
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "SELECT Correcta FROM Respuesta WHERE IdRespuesta = @pIdRespuesta";
+            string sql = "SELECT Correcta FROM Respuestas WHERE IdRespuesta = @pIdRespuesta";
             Correcta = db.QueryFirstOrDefault<bool>(sql, new{pIdRespuesta = IdRespuesta});
         }
         return Correcta;
